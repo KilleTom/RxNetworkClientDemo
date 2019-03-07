@@ -22,6 +22,7 @@ class NetWorkCallback extends ConnectivityManager.NetworkCallback {
     public void onAvailable(Network network) {
         super.onAvailable(network);
         Log.d(tag, "network is connect");
+        RxNetWorkBus.getNetWorkBus().onPost(NetworkType.TRANSPORT_CONNECT);
     }
 
     /**

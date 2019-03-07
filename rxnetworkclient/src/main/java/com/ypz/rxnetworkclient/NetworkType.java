@@ -45,5 +45,11 @@ public enum NetworkType {
      * the network was unconnect
      * 手机网络没有连接或者断开网络
      * */
-    TRANSPORT_UNCONNECT
+    TRANSPORT_UNCONNECT,
+
+    /**
+     * the network was connect
+     * 手机网络没有连接或者断开网络
+     * */
+    TRANSPORT_CONNECT
 }
