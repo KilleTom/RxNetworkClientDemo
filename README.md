@@ -1,7 +1,6 @@
 # RxNetworkClientDemo
-Monitor Android Network Links and State Change  
+Monitor Android Network Links and State Change  and this client used the Rxjava2 to Monitor network change.
 This client just monitor Android Network Links and State Change，you can use this to build your Tools!  
-This client used the Rxjava2 to Monitor network change.
 ## How to use?
 ### Init
 Make sure that developers can easily initialize without writing too much code.look like this example
@@ -75,6 +74,7 @@ So you can use this example code to konw that was working or not.
         )
 ```
 #### Monitor network change
+Just like this to be use
 ```kotlin
         RxNetworkClient.getNetworkClient().registerNetworkStatus(
                 this,
@@ -94,3 +94,11 @@ So you can use this example code to konw that was working or not.
 
                 })
 ```
+#### remove monitor network change
+if you want to remove monitor by use unregisterNetworkStatus void,you will lose this monitor.
+If you need to reset monitor ,you must reinvocation registerNetworkStatus and make a new parm DisposableObserver<NetworkType> when after unregisterNetworkStatus void.
+remove monitor just like this to be use
+```kotlin
+    RxNetworkClient.getNetworkClient().unregisterNetworkStatus(this)
+````
+
